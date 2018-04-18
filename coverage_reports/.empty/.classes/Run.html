@@ -1,0 +1,126 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Run</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Run (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Run</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import tisho.friday.challenge.Address;
+<i>2</i>&nbsp;import tisho.friday.challenge.utils.InvalidInputException;
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;import static tisho.friday.challenge.utils.Utils.*;
+<i>5</i>&nbsp;//import static utils.Utils.*;
+<i>6</i>&nbsp;
+<b class="nc"><i>7</i>&nbsp;public class Run {</b>
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;    private static final String USER_AGENT = &quot;Mozilla/5.0&quot;;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    public static void main(String[] args) {
+<i>14</i>&nbsp;
+<b class="nc"><i>15</i>&nbsp;        Address address = null;</b>
+<i>16</i>&nbsp;        try {
+<b class="nc"><i>17</i>&nbsp;            String mode = getModeFromArgs(args);</b>
+<b class="nc"><i>18</i>&nbsp;            String input_address = getAddressFromArgs(args);</b>
+<i>19</i>&nbsp;
+<b class="nc"><i>20</i>&nbsp;            String API_key = &quot;AIzaSyADqQxCPnLmHlT6I5-8yadnQVobfWViwiY&quot;;</b>
+<i>21</i>&nbsp;
+<b class="nc"><i>22</i>&nbsp;            address = null;</b>
+<i>23</i>&nbsp;
+<b class="nc"><i>24</i>&nbsp;            if(mode.equals(&quot;regex&quot;)) {</b>
+<b class="nc"><i>25</i>&nbsp;                System.out.println(&quot;Solving with regex ...&quot;);</b>
+<b class="nc"><i>26</i>&nbsp;                address = parseAddress(input_address);</b>
+<b class="nc"><i>27</i>&nbsp;            } else if (mode.equals(&quot;google&quot;)){</b>
+<b class="nc"><i>28</i>&nbsp;                    System.out.println(&quot;Solving with a request to Google Maps API ...&quot;);</b>
+<b class="nc"><i>29</i>&nbsp;                    address = getResultsFromGoogle(input_address, API_key);</b>
+<i>30</i>&nbsp;                } else {
+<b class="nc"><i>31</i>&nbsp;                System.err.println(&quot;Invalid mode provided.&quot;);</b>
+<i>32</i>&nbsp;            }
+<b class="nc"><i>33</i>&nbsp;        } catch (Exception e) {</b>
+<b class="nc"><i>34</i>&nbsp;            e.printStackTrace();</b>
+<b class="nc"><i>35</i>&nbsp;        }</b>
+<i>36</i>&nbsp;
+<b class="nc"><i>37</i>&nbsp;        System.out.println(&quot;=====| Final result: |=======\n&quot; + address.toString());</b>
+<b class="nc"><i>38</i>&nbsp;        System.out.println(&quot;=============================&quot;);</b>
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    }
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-18 20:46</div>
+</div>
+</body>
+</html>
